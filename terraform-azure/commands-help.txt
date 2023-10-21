@@ -1,0 +1,8 @@
+terraform init - initialize a configuration directory
+terraform fmt - automatically updates configurations
+terraform validate -
+terraform plan - preview
+terraform apply - start procees
+terraform show
+terraform destroy  
+terraform apply -var-file="values.tfvars" -- start ferraform with file values
