@@ -1,0 +1,29 @@
+docker login azure - loggin azure 
+docker login - loggin docker hub
+docker context create aci namecontext - create context to working in docker env or cloud
+docker context ls - lists with docker context 
+docker context use namecontext - change context
+
+docker images -lists images
+docker pull user/docker-name - download docker images
+docker tag my-webapp dragolub/my-webapp - change name image
+docker push dragolub/my-webapp - upload images at dockerhub
+docker image build -t my-webapp . - create image from project from DockerFile 
+
+docker ps -a -list container
+docker run user/docker-name - start container from image
+docker run -d -p 5000:80 -name my_docker user/docker-name -  start port 5000(out)<->80(in) port with name my_docker
+docker run -it -p 8080:80 -v ${PWD}:/app-volume -w /app-work-dir node:16 npm run serve - start от image node:16, mount volume с work-dir and start npm run serve
+docker run -p 80:80 -e USER_DATABASE=user -e USER_DATABASE=pass my-container - start container with env-params 
+docker run -dit --name my-container --network my_network
+
+docker logs my_docker  - view Log from my_docker container
+docker exec -it my_docker /bash/sh - start bash/sh in working container  
+docker exec <container-id> cat /data.txt - view data.txt file from container
+
+docker volume create my_volume - create volume 
+dcoker network create my_network - create network
+
+docker container inspect CONTAINER_ID - 
+  
+docker rmi my_docker - remove container and image
